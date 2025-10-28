@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Github, Linkedin, Mail, ChevronDown, Server, Shield, Network, Code, FileText, Award, Briefcase, GraduationCap, Eye } from 'lucide-react';
 
+const GITHUB_URL = 'https://github.com/bakoww';
+
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('accueil');
@@ -260,7 +262,7 @@ function App() {
             Spécialiste Solutions d'Infrastructure, Systèmes et Réseaux
           </p>
           <div className="flex justify-center gap-4 mb-12">
-            <a href="#" className="p-3 bg-cyan-500/20 hover:bg-cyan-500/30 rounded-full transition-colors border border-cyan-500/30">
+            <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="p-3 bg-cyan-500/20 hover:bg-cyan-500/30 rounded-full transition-colors border border-cyan-500/30">
               <Github className="text-cyan-400" size={24} />
             </a>
             <a href="#" className="p-3 bg-cyan-500/20 hover:bg-cyan-500/30 rounded-full transition-colors border border-cyan-500/30">
@@ -528,8 +530,8 @@ function App() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Github className="text-cyan-400" size={20} />
-                  <a href="#" className="text-cyan-400 hover:text-cyan-300 hover:underline">
-                    github.com/votre-username
+                  <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 hover:underline">
+                    github.com/bakoww
                   </a>
                 </div>
               </div>
