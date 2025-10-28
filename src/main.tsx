@@ -7,7 +7,7 @@ import './index.css'
 const link = document.createElement('link')
 link.rel = 'icon'
 link.type = 'image/svg+xml'
-link.href = '/favicon.svg' // ou '/sb1-fv8yvovn/favicon.svg' si base non '/'
+link.href = './public/favicon.svg' // ou '/sb1-fv8yvovn/favicon.svg' si base non '/'
 document.head.appendChild(link)
 
 // set page title
