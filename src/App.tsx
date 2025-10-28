@@ -251,7 +251,7 @@ function App() {
 
         <div className="relative z-10 text-center px-4">
           <h1 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-orange-400 mb-6 animate-fade-in">
-            Votre Nom
+            Mathis DUPONT--KORPYS
           </h1>
           <p className="text-xl md:text-2xl text-cyan-300 mb-4">
             Étudiant en BTS SIO Option SISR
