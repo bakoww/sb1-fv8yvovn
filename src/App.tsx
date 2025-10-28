@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, FormEvent } from 'react';
 import { Menu, X, Github, Linkedin, Mail, ChevronDown, Server, Shield, Network, Code, FileText, Award, Briefcase, GraduationCap, Eye } from 'lucide-react';
 
 const GITHUB_URL = 'https://github.com/bakoww';
@@ -8,6 +8,9 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('accueil');
   const [scrolled, setScrolled] = useState(false);
+  const [contactName, setContactName] = useState('');
+  const [contactEmail, setContactEmail] = useState('');
+  const [contactMessage, setContactMessage] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +38,13 @@ function App() {
       element.scrollIntoView({ behavior: 'smooth' });
       setIsMenuOpen(false);
     }
+  };
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(`Contact portfolio - ${contactName || 'Sans nom'}`);
+    const body = encodeURIComponent(`Nom: ${contactName}\nEmail: ${contactEmail}\n\n${contactMessage}`);
+    window.location.href = `mailto:dupontkorpysm@gmail.com?subject=${subject}&body=${body}`;
   };
 
   const competences = [
@@ -547,13 +557,15 @@ function App() {
 
             <div className="bg-gray-900 p-8 rounded-lg shadow-lg shadow-cyan-500/10 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-white mb-6">Envoyez un message</h3>
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
                   <label className="block text-gray-300 mb-2">Nom</label>
                   <input
                     type="text"
                     className="w-full px-4 py-2 bg-gray-800 border border-gray-700 text-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
-                    placeholder="Votre nom"
+                    placeholder="Votre Nom"
+                    value={contactName}
+                    onChange={(e) => setContactName(e.target.value)}
                   />
                 </div>
                 <div>
@@ -562,6 +574,8 @@ function App() {
                     type="email"
                     className="w-full px-4 py-2 bg-gray-800 border border-gray-700 text-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
                     placeholder="votre@email.com"
+                    value={contactEmail}
+                    onChange={(e) => setContactEmail(e.target.value)}
                   />
                 </div>
                 <div>
@@ -570,6 +584,8 @@ function App() {
                     rows={4}
                     className="w-full px-4 py-2 bg-gray-800 border border-gray-700 text-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
                     placeholder="Votre message..."
+                    value={contactMessage}
+                    onChange={(e) => setContactMessage(e.target.value)}
                   ></textarea>
                 </div>
                 <button
