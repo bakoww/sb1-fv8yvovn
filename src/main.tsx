@@ -10,5 +10,8 @@ link.type = 'image/svg+xml'
 link.href = '/favicon.svg'
 document.head.appendChild(link)
 
+// set page title
+document.title = 'Mathis Dupont--Korpys Portfolio'
+
 const root = ReactDOM.createRoot(document.getElementById('root')!)
 root.render(<App />)

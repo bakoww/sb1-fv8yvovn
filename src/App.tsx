@@ -193,11 +193,14 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
-              <h1 className={`text-2xl font-bold transition-colors ${
+              <div className={`flex items-center gap-3 transition-colors ${
                 scrolled ? 'text-cyan-400' : 'text-cyan-300'
               }`}>
-                Portfolio BTS SIO SISR
-              </h1>
+                <Network className="text-cyan-400" size={28} />
+                <h1 className="text-2xl font-bold">
+                  Portfolio BTS SIO SISR
+                </h1>
+              </div>
             </div>
 
             {/* Desktop Menu */}
