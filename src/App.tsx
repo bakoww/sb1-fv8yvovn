@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Github, Linkedin, Mail, ChevronDown, Server, Shield, Network, Code, FileText, Award, Briefcase, GraduationCap, Eye } from 'lucide-react';
 
 const GITHUB_URL = 'https://github.com/bakoww';
+const LINKEDIN_URL = 'https://www.linkedin.com/in/mathis-dupont—korpys-12a474295';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -265,7 +266,7 @@ function App() {
             <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="p-3 bg-cyan-500/20 hover:bg-cyan-500/30 rounded-full transition-colors border border-cyan-500/30">
               <Github className="text-cyan-400" size={24} />
             </a>
-            <a href="#" className="p-3 bg-cyan-500/20 hover:bg-cyan-500/30 rounded-full transition-colors border border-cyan-500/30">
+            <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="p-3 bg-cyan-500/20 hover:bg-cyan-500/30 rounded-full transition-colors border border-cyan-500/30">
               <Linkedin className="text-cyan-400" size={24} />
             </a>
             <a href="#contact" className="p-3 bg-cyan-500/20 hover:bg-cyan-500/30 rounded-full transition-colors border border-cyan-500/30">
@@ -304,11 +305,11 @@ function App() {
               <div className="bg-gray-800 p-6 rounded-lg border border-cyan-500/30">
                 <h3 className="font-semibold text-cyan-400 mb-2">Formation</h3>
                 <p className="text-gray-300">BTS SIO SISR</p>
-                <p className="text-sm text-gray-400">2023 - 2025</p>
+                <p className="text-sm text-gray-400">2024 - 2026</p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg border border-cyan-500/30">
                 <h3 className="font-semibold text-cyan-400 mb-2">Établissement</h3>
-                <p className="text-gray-300">Nom du Lycée</p>
+                <p className="text-gray-300">Lycée Saint-Marc</p>
                 <p className="text-sm text-gray-400">Ville</p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg border border-cyan-500/30">
@@ -520,12 +521,12 @@ function App() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Mail className="text-cyan-400" size={20} />
-                  <span className="text-gray-300">votre.email@exemple.fr</span>
+                  <span className="text-gray-300">dupontkorpysm@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Linkedin className="text-cyan-400" size={20} />
-                  <a href="#" className="text-cyan-400 hover:text-cyan-300 hover:underline">
-                    linkedin.com/in/votre-profil
+                  <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 hover:underline">
+                    www.linkedin.com/in/mathis-dupont—korpys-12a474295
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
